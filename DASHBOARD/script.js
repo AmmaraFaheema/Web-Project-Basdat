@@ -11,7 +11,6 @@ document.querySelector('.main-content').addEventListener('click', function() {
 
 document.querySelectorAll('.menu li a').forEach(item => {
     item.addEventListener('click', function() {
-        // Remove active class from all menu items
         document.querySelectorAll('.menu li a').forEach(link => {
             link.classList.remove('active');
         });
