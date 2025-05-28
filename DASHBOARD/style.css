@@ -14,7 +14,6 @@ body{
 .container{
     display: flex;
     min-height: 100vh;
-    flex-wrap: wrap;
 }
 
 .sidebar{
@@ -82,15 +81,14 @@ body{
 }
 
 .menu li a.active {
-    background-color: rgba(255, 205, 56, 0.1); /* Highlight effect for active menu item */
-    color: rgba(255, 205, 56, 1); /* Brighter color for active state */
+    background-color: rgba(255, 205, 56, 0.1); 
+    color: rgba(255, 205, 56, 1); 
 }
 
 .main-content {
     margin-left: 250px;
-    flex-grow: 1;
+    width: calc(100% - 250px);
     padding: 0;
-    width: auto; /* lebar konten utama menyesuaikan */
 }
 
 header {
@@ -101,7 +99,7 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 900;
     height: 100px;
     padding: 0 20px;
     margin: 0;
@@ -117,23 +115,13 @@ header {
     padding: 0;
 }
 
-.header-right {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    z-index: 1001; /* Ensure header-right is above other elements */
-}
-
 .header-right a {
     margin-right: 30px;
-    display: inline-block;
-    position: relative;
 }
 
 .header-right a img {
     width: 30px;
-    height: 30px;
-    display: block;
+    height: 30px; 
 }
 
 .content{
@@ -158,11 +146,12 @@ header {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 kolom lebar sama */
-    row-gap: 15px;
-    column-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 40px;
+    justify-items: start;
     cursor: pointer;
-    width: 10vh;
+    max-width: 1000px;
+    margin: 0;
 }
 
 .card{
@@ -171,16 +160,17 @@ header {
     padding: 20px;
     text-align: center;
     border-radius: 18px;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 178px;
-    width: 314px;
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+    width: 100%; 
+    max-width: 314px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
     border-left: 10px solid transparent;
+    position: relative;
 }
 
 .card::before {
@@ -219,7 +209,7 @@ header {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    z-index: 2000;
+    z-index: 20001;
 }
 
 .hamburger img {
@@ -250,20 +240,22 @@ header {
         width: 100%;
     }
 
-    header {
-        width: 100%;
-        padding: 0 10px;
-    }
-
     .header-left h4 {
-        margin-left: 50px;
+        margin-left: 40px;
     }
 
+    
     .header-right a {
-        margin-right: 10px;
+        margin-right: 0;
     }
 
     .cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .card {
+        max-width: 100%;
     }
 }

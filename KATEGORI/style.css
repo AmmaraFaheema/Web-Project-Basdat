@@ -109,7 +109,7 @@ header {
 .header-left h4 {
     color: #000;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 37.9px;
     line-height: 100%;
     margin: 0;
     padding: 0;
@@ -130,7 +130,7 @@ header {
 }
 
 .form-section h5 {
-    font-size: 25px;
+    font-size: 28.43px;
     color: #000;
     margin-bottom: 20px;
     margin-top: 5px;
@@ -249,7 +249,41 @@ tr:nth-child(even) {
     filter: brightness(0) invert(50%) sepia(100%) hue-rotate(0deg) saturate(500%);
 }
 
+.hamburger{
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 15px;
+    background: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.hamburger img {
+    color: #BF9A2A;
+    font-size: 24px;
+}
+
+.sidebar.active ~ .hamburger {
+    display: none; /* Tombol hamburger hilang saat sidebar muncul */
+}
+
 @media (max-width: 768px) {
+    .hamburger{
+        display: block;
+    }
+
+    .header-left h4 {
+        margin-left: 40px;
+    }
+
+    .header-right a {
+        margin-right: 0;
+    }
+
     .sidebar {
         transform: translateX(-100%);
     }
