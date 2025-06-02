@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produk</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Pegawai</title>
+     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -20,8 +20,8 @@
             <li><a href="#"><img src="assets/icon-beranda.png" alt="Beranda">Beranda</a></li>
             <li><a href="#"><img src="assets/icon-kategori.png" alt="Kategori">Kategori</a></li>                
             <li><a href="#"><img src="assets/icon-layanan.png" alt="Layanan">Layanan</a></li>
-            <li><a href="#"><img src="assets/icon-pegawai.png" alt="Pegawai">Pegawai</a></li>
-            <li><a href="#" class="active"><img src="assets/icon-produk.png" alt="Produk">Produk</a></li>            
+            <li><a href="#" class="active"><img src="assets/icon-pegawai.png" alt="Pegawai">Pegawai</a></li>
+            <li><a href="#"><img src="assets/icon-produk.png" alt="Produk">Produk</a></li>            
             <li><a href="#"><img src="assets/icon-pasien.png" alt="Pasien">Pasien</a></li>
             <li><a href="#"><img src="assets/icon-transaksi.png" alt="Transaksi">Transaksi</a></li>
         </ul>
@@ -31,7 +31,7 @@
 <div class="main-content">
     <header>
         <div class="header-left">
-            <h4>Produk</h4>
+            <h4>Pegawai</h4>
         </div>
 
         <div class="header-right">
@@ -42,19 +42,29 @@
 
     <div class="content">
         <div class="form-section">
-            <h5>Tambah Produk</h5>
+            <h5>Tambah Pegawai</h5>
             <div class="form-group">
-                <label>Nama Produk</label>
-                <input type="text" id="nama-produk">
+                <label>Nama Pegawai</label>
+                <input type="text" id="nama-pegawai">
                 <small>*max. 100 kata</small>
             <div class="form-item-container">
                 <div class="form-item">
-                    <label>Harga</label>
-                    <input type="text" id="nama-produk">
+                    <label>Jabatan</label>
+                    <div class="input-with-icon">
+                    <select>
+                        <option value="jabatan1">Jabatan 1</option>
+                        <option value="jabatan2">Jabatan 2</option>
+                        <option value="jabatan3">Jabatan 3</option>
+                    </select>
+                    </div>
+                <small>Silahkan pilih jabatan</small>
                 </div>
                 <div class="form-item">
-                    <label>Stok</label>
-                    <input type="text">
+                    <label>Nomor Telepon</label>
+                    <div class="input-with-icon">
+                        <img src="assets/phone.png" alt="">
+                        <input type="text">
+                    </div>
                 </div>
             </div>
             <div class="button-container">
@@ -64,7 +74,7 @@
         </div>
 
         <div class="table-section">
-            <h5>Daftar Produk</h5>
+            <h5>Daftar Pegawai</h5>
             <div class="table-header">
                 <input type="text" placeholder="Search...">
                 <a href="#">Import as CSV</a>
@@ -74,9 +84,9 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Produk</th>
-                        <th>Harga</th>
-                        <th>Stok</th>
+                        <th>Nama Pegawai</th>
+                        <th>Jabatan</th>
+                        <th>Nomor Telepon</th>
                         <th>Action</th>
                     </tr>
                 </thead>

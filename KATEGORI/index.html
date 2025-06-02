@@ -18,9 +18,11 @@
         <div class="menu-title">MENU</div>
         <ul class="menu">
             <li><a href="#"><img src="assets/icon-beranda.png" alt="Beranda">Beranda</a></li>
-            <li><a href="#" class="active"><img src="assets/icon-kategori.png" alt="Kategori">Kategori</a></li>                <li><a href="#"><img src="assets/icon-layanan.png" alt="Layanan">Layanan</a></li>
+            <li><a href="#" class="active"><img src="assets/icon-kategori.png" alt="Kategori">Kategori</a></li>                
+            <li><a href="#"><img src="assets/icon-layanan.png" alt="Layanan">Layanan</a></li>
             <li><a href="#"><img src="assets/icon-pegawai.png" alt="Pegawai">Pegawai</a></li>
-            <li><a href="#"><img src="assets/icon-produk.png" alt="Produk">Produk</a></li>            <li><a href="#"><img src="assets/icon-pasien.png" alt="Pasien">Pasien</a></li>
+            <li><a href="#"><img src="assets/icon-produk.png" alt="Produk">Produk</a></li>            
+            <li><a href="#"><img src="assets/icon-pasien.png" alt="Pasien">Pasien</a></li>
             <li><a href="#"><img src="assets/icon-transaksi.png" alt="Transaksi">Transaksi</a></li>
         </ul>
     </div>
@@ -42,10 +44,11 @@
                 <div class="form-section">
                     <h5>Tambah Kategori Layanan</h5>
                     <div class="form-group">
-                        <label for="category-name">Nama Kategori</label>
-                        <input type="text" id="category-name" placeholder="*max. 200 kata">
+                        <label>Nama Kategori</label>
+                        <input type="text" id="category-name">
+                        <small>*max. 100 kata</small>
+                        <button class="add-button" onclick="addCategory()">Tambah</button>
                     </div>
-                    <button class="add-button" onclick="addCategory()">Tambah</button>
                 </div>
 
                 <div class="table-section">
@@ -54,18 +57,20 @@
                         <input type="text" placeholder="Search...">
                         <a href="#">Import as CSV</a>
                     </div>
+
                     <table id="category-table">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Nama Kategori</th>
-                                <th>Action</th>
+                                <th class="kategori-left">Nama Kategori</th>
+                                <th class="action-table">Action</th>
                             </tr>
                         </thead>
+                        
                         <tbody>
                             <tr>
                                 <td>#18533</td>
-                                <td>Wikotria</td>
+                                <td class="td-left">Wikotria</td>
                                 <td class="action-buttons">
                                     <img src="assets/edit.png" alt="edit" class="edit">
                                     <img src="assets/delete.png" alt="delete" class="delete" onclick="deleteRow(this)">
@@ -73,7 +78,7 @@
                             </tr>
                             <tr>
                                 <td>#45169</td>
-                                <td>Trivie Byrd</td>
+                                <td class="td-left">Trivie Byrd</td>
                                 <td class="action-buttons">
                                     <img src="assets/edit.png" alt="edit" class="edit">
                                     <img src="assets/delete.png" alt="delete" class="delete" onclick="deleteRow(this)">
@@ -81,7 +86,7 @@
                             </tr>
                             <tr>
                                 <td>#34304</td>
-                                <td>Brad Mason</td>
+                                <td class="td-left">Brad Mason</td>
                                 <td class="action-buttons">
                                     <img src="assets/edit.png" alt="edit" class="edit">
                                     <img src="assets/delete.png" alt="delete" class="delete" onclick="deleteRow(this)">
@@ -89,7 +94,7 @@
                             </tr>
                             <tr>
                                 <td>#17188</td>
-                                <td>Sanderson</td>
+                                <td class="td-left">Sanderson</td>
                                 <td class="action-buttons">
                                     <img src="assets/edit.png" alt="edit" class="edit">
                                     <img src="assets/delete.png" alt="delete" class="delete" onclick="deleteRow(this)">
@@ -97,7 +102,7 @@
                             </tr>
                             <tr>
                                 <td>#44222</td>
-                                <td>Dominic</td>
+                                <td class="td-left">Dominic</td>
                                 <td class="action-buttons">
                                     <img src="assets/edit.png" alt="edit" class="edit">
                                     <img src="assets/delete.png" alt="delete" class="delete" onclick="deleteRow(this)">
@@ -106,12 +111,11 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
         </div>
     </div>
 
 <button class="hamburger" id="hamburger">
-    <img src="assets/menu-line.png" alt="">
+    <img src="assets/menu-line.png" alt="menu-line">
 </button>
 
 <script src="script.js"></script>
