@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  font-family: Montserrat;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2.5em;
+    background-color: #F3F3F3;
+    border: #d1d0d0 solid 2px;
+    box-shadow: #00000040 0px 3px 4px;
+}
+
+.left-head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.right-head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+    margin-left:2em ;
+}
+
+
+body{
+    background-color: #F3F3F3;
+}
+.header #bek{
+    float: left;
+    margin-right: 3em;
+}
+
+.container{
+    width: 85%;
+    height: 50vh;
+    background-color: #FFFFFF;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3em;
+    padding: 2.5em;
+    padding-right: 3em;
+    border: none;
+    border-radius: 10px;
+}
+
+h5{
+    margin-left: 1em;
+    font-size: 23px;
+    color: #000000;
+    float: top  ;
+    text-align: left;
+}
+
+.pp{
+    width: 120px;
+    height: 120px;
+    background: url(../assets/image.png);
+    background-size: 100% 100%;
+    margin-left: 3%;
+    margin-top: 2.5em;
+    float: left;
+    border: none;
+    border-radius: 100px;
+    /* display: flex; */
+    
+}
+
+.detail{
+    height: 2vh;
+    margin-bottom: 1em;
+}
+
+.under-detail{
+    width: 45%;
+    height: 30vh ;
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: none;
+}
+
+.user-changer{
+    width: 30%;
+    height: 20vh;
+    float: right;
+    margin-left: 14em;
+    margin-top: 2em;
+    position: absolute;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: left;
+}
+
+.user-changer p{
+    font-size: 16px;
+    font-family: 'Montserrat';
+    text-align: left;
+}
+
+#right-head{
+    justify-content: right;
+    gap: 1em;
+    align-items: center
+    
+}
+
+.button-container{
+    height: 90px;
+    width: 500px;
+    margin-left: auto;
+    margin-top: 20%;
+    margin-right: 2em;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em
+
+}
+.button{
+    height: 25px;
+    width: 200px;
+    background-color: #000000;
+    align-items: center;
+    border-radius: 64px;
+    -webkit-border-radius: 64px;
+    -moz-border-radius: 64px;
+    -ms-border-radius: 64px;
+    -o-border-radius: 64px;
+    padding: 10px 15px 10px 15px;
+}
+
+.button p{
+    color: #FFCD38;
+    font-size: 15px;
+    font-family: 'Montserrat';
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.button :hover{
+    cursor: pointer;
+}

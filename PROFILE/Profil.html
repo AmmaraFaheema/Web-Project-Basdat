@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazskin</title>
+    <link rel="stylesheet" href="StyleProf.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="header">
+    <div class="left-head">
+      <a href="Dashboard.html">
+      <img src="assets/icon-back.png" alt="bek" id ="bek">
+      </a>
+      <h1 id ="title">Profil</h1>
+    </div>
+    <div class="right-head">
+      <img onclick="BackPage()" src="assets/arrow.png" alt="" style="height: 35px; width: 35px" id="arrow">
+      <img src="assets/user.png" alt="" style="height: 35px; width: 35px">
+    </div>
+      </div>
+
+  <div class="container">
+    <div id="detail">
+      <h5>Detail Pengguna</h5>
+    </div>
+      <div class="pp"></div>
+        <div class="user-changer">
+          <p><b>Username</b></p>
+          <p id="passid"><b>Nomor Telepon</b></p>
+          <p><b>Alamat</b></p>
+          <p><b>Jabatan</b></p>
+        </div>
+        <div class="button-container">
+        <div class="button"><p>Hapus Akun</p></div>
+        <div class="button"><p>Log Out</p></div>
+      </div>
+      </div>
+    </div>
+</body>
+<script>
+  function BackPage(){
+    alert("Berhasil Log Out");
+    window.location.href = "LoginPage.html";
+  }
+</script>
+</html>

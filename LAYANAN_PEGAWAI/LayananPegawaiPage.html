@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazskin</title>
+    <link rel="stylesheet" href="PegawaiLayananStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="logo"><img src="assets/logo.png" alt="logo"></div>
+        <div class="menu-title">MENU</div>
+            <ul class="menu">
+                <!-- <li><a href="#"><li></li>Beranda</a></li> -->
+                <li><a href="#"><img src="assets/icon-beranda.png" alt="Beranda">Beranda</a></li>
+                <li><a href="#"><img src="assets/icon-kategori.png" alt="Kategori">Kategori</a></li>
+                <li><a href="#"class="active"><img src="assets/icon-layanan.png" alt="Layanan">Layanan</a></li>
+                <li><a href="#"><img src="assets/icon-pegawai.png" alt="Pegawai">Pegawai</a></li>
+                <li><a href="#"><img src="assets/icon-produk.png" alt="Produk">Produk</a></li>
+                <li><a href="#"><img src="assets/icon-pasien.png" alt="Pasien">Pasien</a></li>
+                <li><a href="#"><img src="assets/icon-transaksi.png" alt="Transaksi">Transaksi</a></li>
+            </ul>
+    </div>
+    <header>
+            <div class="header-left">
+                <h4>Layanan Pegawai</h4>
+            </div>
+            <div class="header-right">
+                <a href="#" class="arrow-icon"><img src="assets/arrow.png" alt="arrow-icon"></a>
+                <a href="Profil.html" class="user-icon"><img src="assets/user.png" alt="user"></a>
+            </div>
+        </header>
+        <div class="content-under-header">
+            <div class="top-button"> <h6>Layanan</h6></div>
+            <div class="top-button" id="butt-active"> <h6>Layanan Pegawai</h6></div>
+        </div>
+        <div class="content-2">
+            <h5>Atur Layanan</h5>
+            <div class="container-tambah">
+                <div class="form-group">
+                    <label for="layanan">Nama Layanan</label>
+                    <input type="text" name="layanan" id="layanan">
+                    <p>silahkan pilih salah satu</p>
+                </div>
+                <div class="form-group">
+                    <div class="jancok">
+                        <label for="Kategori">Kategori</label>
+                        <label for="Rp">Rp</label>
+                    </div>
+                    <div class="custom-select-content">
+                        <img src="assets/icon-user-select.png" alt="">
+                        <select class="custom-select">
+                        <option value="" disabled selected></option>
+                        <option value="umum">Umum</option>
+                        <option value="remaja">Remaja</option>
+                        <option value="dewasa">Dewasa</option>
+                        <option value="anak">Anak</option>
+                        <option value="lain">Lain</option>
+                        </select>
+                        <div class="custom-input-content">
+                            <img src="assets/icon-rp.png" alt="">
+                            <input class="custom-input" type="text" name="Rp" id="Rp">
+                        </div>
+                    </div>
+                    
+                    <p> <i>Silahkan pilih salah satu </i></p>
+                </div>
+                <div class="form-group">
+                    <button id="button-tambah"> <p>Tambah</p></button>
+                </div>
+            </div>
+        </div>
+        <div class="content-3">
+            <h5>Daftar Layanan</h5>
+            <div class="search-layanan">
+                <input type="text" placeholder="Search...">
+                <img src="assets/icon-search.png" alt="search">
+                <pre> <u>Import as CSV</u> </pre>
+            </div>
+            <table id="category-table" class="layanan-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th >Nama Layanan</th>
+                                <th>Kategori</th>
+                                <th >Action</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <tr>
+                                <td>#18533</td>
+                                <td class="td-left">Wikotria</td>
+                                <td>Mutaber</td>
+                                <td class="action-buttons">
+                                    <img class = "icontol" src="assets/icon-edit.png" alt="edit" class="edit">
+                                    <img class = "icontol" src="assets/icon-trash.png" alt="delete" class="delete" onclick="deleteRow(this)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#45169</td>
+                                <td class="td-left">Fayyaz Haqqi</td>
+                                <td>Kegantengan</td>
+                                <td class="action-buttons">
+                                    <img class = "icontol" src="assets/icon-edit.png" alt="edit" class="edit">
+                                    <img class = "icontol" src="assets/icon-trash.png" alt="delete" class="delete" onclick="deleteRow(this)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#34304</td>
+                                <td class="td-left">Brad Mason</td>
+                                <td>NPD</td>
+                                <td class="action-buttons">
+                                    <img class = "icontol" src="assets/icon-edit.png" alt="edit" class="edit">
+                                    <img class = "icontol" src="assets/icon-trash.png" alt="delete" class="delete" onclick="deleteRow(this)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#17188</td>
+                                <td class="td-left">Sanderson</td>
+                                <td>Abses</td>
+                                <td class="action-buttons">
+                                    <img class = "icontol" src="assets/icon-edit.png" alt="edit" class="edit">
+                                    <img class = "icontol" src="assets/icon-trash.png" alt="delete" class="delete" onclick="deleteRow(this)">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#44222</td>
+                                <td class="td-left">Dominic</td>
+                                <td>Kanker</td>
+                                <td class="action-buttons">
+                                    <img class = "icontol" src="assets/icon-edit.png" alt="edit" class="edit">
+                                    <img class = "icontol" src="assets/icon-trash.png" alt="delete" class="delete" onclick="deleteRow(this)">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+        </div>
+</body>
+</html>
+
+<!-- \lu tau ? -->
