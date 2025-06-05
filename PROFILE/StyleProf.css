@@ -64,7 +64,7 @@ h5{
 .pp{
     width: 120px;
     height: 120px;
-    background: url(../assets/image.png);
+    background: url(assets/image.png);
     background-size: 100% 100%;
     margin-left: 3%;
     margin-top: 2.5em;
