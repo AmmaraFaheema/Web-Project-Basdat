@@ -155,3 +155,24 @@ h5{
 .button :hover{
     cursor: pointer;
 }
+
+.editable {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.edit-icon {
+  color: #000000;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-left: 11em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+

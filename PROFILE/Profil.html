@@ -1,54 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fazskin</title>
-    <link rel="stylesheet" href="StyleProf.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fazskin</title>
+  <link rel="stylesheet" href="StyleProf.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="header">
     <div class="left-head">
       <a href="Dashboard.html">
-      <img src="assets/icon-back.png" alt="bek" id ="bek">
+        <img src="assets/icon-back.png" alt="bek" id="bek" />
       </a>
-      <h1 id ="title">Profil</h1>
+      <h1 id="title">Profil</h1>
     </div>
     <div class="right-head">
-      <img onclick="BackPage()" src="assets/arrow.png" alt="" style="height: 35px; width: 35px" id="arrow">
-      <img src="assets/user.png" alt="" style="height: 35px; width: 35px">
+      <img onclick="BackPage()" src="assets/arrow.png" alt="" style="height: 35px; width: 35px" id="arrow" />
+      <img src="assets/user.png" alt="" style="height: 35px; width: 35px" />
     </div>
-      </div>
+  </div>
 
   <div class="container">
     <div id="detail">
       <h5>Detail Pengguna</h5>
     </div>
-      <div class="pp"></div>
-        <div class="user-changer">
-          <p><b>Username</b></p>
-          <p id="passid"><b>Nomor Telepon</b></p>
-          <p><b>Alamat</b></p>
-          <p><b>Jabatan</b></p>
+    <div class="pp"></div>
+
+    <div class="user-changer">
+      <div class="field">
+        <label><b>Username</b></label>
+        <div class="editable">
+          <span id="username">Username goes here</span>
+          <img src="assets/icon-pen.png" alt="" class="edit-icon" onclick="editField('username')">
         </div>
-        <div class="button-container">
-        <div class="button"><p>Hapus Akun</p></div>
-        <div class="button"><p>Log Out</p></div>
       </div>
+
+      <div class="field">
+        <label><b>Nomor Telepon</b></label>
+        <div class="editable">
+          <span id="telepon">081234567890</span>
+          <img src="assets/icon-pen.png" alt="" class="edit-icon" onclick="editField('telepon')">
+        </div>
+      </div>
+
+      <div class="field">
+        <label><b>Alamat</b></label>
+        <div class="editable">
+          <span id="alamat">Address goes here</span>
+          <img src="assets/icon-pen.png" alt="" class="edit-icon" onclick="editField('alamat')">
+        </div>
+      </div>
+
+      <div class="field">
+        <label><b>Jabatan</b></label>
+        <div class="editable">
+          <span id="jabatan">Jabatan goes here</span>
+          <img src="assets/icon-pen.png" alt="" class="edit-icon" onclick="editField('jabatan')">
+        </div>
       </div>
     </div>
+
+    <div class="button-container">
+      <div class="button"><p>Hapus Akun</p></div>
+      <div class="button"><p>Log Out</p></div>
+    </div>
+  </div>
+
+  <script>
+    function BackPage() {
+      alert("Berhasil Log Out");
+      window.location.href = "LoginPage.html";
+    }
+
+    function editField(fieldId) {
+      const span = document.getElementById(fieldId);
+      const currentValue = span.textContent;
+
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.value = currentValue;
+      input.style.width = '80%';
+      input.style.borderRadius = '60px';
+      input.style.border= 'none';
+
+      const saveBtn = document.createElement('button');
+      saveBtn.textContent = 'Simpan';
+      saveBtn.style.marginLeft = '10px';
+      saveBtn.style.borderRadius = '60px';
+      saveBtn.style.border= '1px';
+
+      const container = span.parentElement;
+      container.innerHTML = '';
+      container.appendChild(input);
+      container.appendChild(saveBtn);
+
+      saveBtn.onclick = () => {
+        const newValue = input.value;
+        span.textContent = newValue;
+        container.innerHTML = '';
+        container.appendChild(span);
+        const editIcon = document.createElement('img');
+        editIcon.className = 'assets/icon-pen.png';
+        editIcon.onclick = () => editField(fieldId);
+        container.appendChild(editIcon);
+      };
+    }
+  </script>
 </body>
-<script>
-  function BackPage(){
-    alert("Berhasil Log Out");
-    window.location.href = "LoginPage.html";
-  }
-</script>
 </html>
